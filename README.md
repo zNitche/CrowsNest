@@ -1,4 +1,4 @@
-# EagleNest
+# CrowsNest
 lightberryAPI + Raspberry Pi Pico W = LAN services hub
 
 ```
