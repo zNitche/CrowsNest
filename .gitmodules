@@ -1,0 +1,4 @@
+[submodule "lightberry"]
+	path = lightberry
+	url = https://github.com/zNitche/lightberryAPI
+	branch = production
