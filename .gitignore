@@ -2,3 +2,4 @@
 __pycache__
 lightberry_config.json
 files
+db.json
