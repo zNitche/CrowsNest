@@ -14,8 +14,14 @@ class ModelBase:
             if hasattr(self, key):
                 setattr(self, key, value)
 
-    def dump(self):
-        return {}
+    def dump(self, extra_attrs=None):
+        data = {}
+
+        if extra_attrs is not None:
+            for key, value in extra_attrs.items():
+                data[key] = value
+
+        return data
 
 
 class ServiceModel(ModelBase):
@@ -39,11 +45,13 @@ class ServiceModel(ModelBase):
 
         super().__init__(data)
 
-    def dump(self):
-        return {
-            "name": self.name,
-            "added_at": self.added_at,
-            "url": self.url,
-            "port": self.port,
-            "health_check_endpoint": self.health_check_endpoint
-        }
+    def dump(self, extra_attrs=None):
+        data = super().dump(extra_attrs)
+
+        data["name"] = self.name
+        data["added_at"] = self.added_at
+        data["url"] = self.url
+        data["port"] = self.port
+        data["health_check_endpoint"] = self.health_check_endpoint
+
+        return data

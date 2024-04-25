@@ -38,6 +38,13 @@ async def get_services(request):
                         }
                         )
 
-    services = [service.dump() for service in services]
+    dump_services = []
+    for service in services:
+        is_available = services_availability_cache.read(service.id)
+        extra_attrs = {
+            "is_available": is_available
+        }
 
-    return Response(payload=jsonify(services))
+        dump_services.append(service.dump(extra_attrs=extra_attrs))
+
+    return Response(payload=jsonify(dump_services))
