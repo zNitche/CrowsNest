@@ -1,10 +1,12 @@
 {
   "services": [
     {
+      "id": 0,
       "name": "",
-      "addedAt": "",
-      "address": "",
-      "port": ""
+      "added_at": "",
+      "url": "",
+      "port": "",
+      "health_check_endpoint": ""
     }
   ]
 }
