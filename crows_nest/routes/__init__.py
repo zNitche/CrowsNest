@@ -1,5 +1,5 @@
 from crows_nest.routes.core import core
-from crows_nest.routes.api import api
+from crows_nest.routes import api
 
 from lightberry import AppContext
 
