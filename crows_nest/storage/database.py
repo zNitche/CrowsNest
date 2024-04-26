@@ -50,7 +50,7 @@ class Database:
             filtered_data.sort(reverse=True if sort_by_type == "desc" else False,
                                key=lambda e: e[sort_by_key])
 
-        models = [model(data=item) for item in filtered_data]
+        models = [model().create(item) for item in filtered_data]
 
         if first:
             models = models[0] if len(models) > 0 else None
