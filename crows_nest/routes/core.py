@@ -1,5 +1,4 @@
-from lightberry import Router, Response, FileResponse
-from lightberry.utils import files_utils
+from lightberry import Router, FileResponse
 
 
 core = Router("core")
@@ -8,10 +7,6 @@ core = Router("core")
 @core.route("/assets/:asset_name")
 async def serve_assets(request, asset_name):
     serialized_path = f"/files/assets/{asset_name.replace('..', '')}"
-
-    if not files_utils.file_exists(serialized_path):
-        return Response(status_code=404)
-
     response = FileResponse(file_path=serialized_path)
 
     if serialized_path.endswith(".gz"):
