@@ -16,7 +16,7 @@ class LogSensorsTask(TaskBase):
             self.__aht20 = AHT20(machine_communication.i2c_0)
 
         except Exception as e:
-            pass
+            self.__print_log(message="error while performing modules setup", exception=e)
 
     def __log_ath20(self):
         if self.__aht20:

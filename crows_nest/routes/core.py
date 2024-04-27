@@ -28,9 +28,6 @@ async def serve_assets(request, asset_name):
 @core.catch_all()
 async def web_panel(request):
     if request.url.endswith("favicon.ico"):
-        favicon_path = "/files/favicon.ico"
-
-        return FileResponse(file_path=favicon_path) \
-            if files_utils.file_exists(favicon_path) else Response(status_code=404)
+        return FileResponse(file_path="/files/favicon.ico")
 
     return FileResponse(file_path="/files/index.html")
