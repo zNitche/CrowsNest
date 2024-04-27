@@ -1,8 +1,11 @@
 from crows_nest.storage import Database
 from crows_nest.storage import Cache
+from crows_nest import machine_communication
+
 
 db = Database()
 services_availability_cache = Cache()
+sensors_cache = Cache()
 
 
 def create_routers(app):
@@ -10,6 +13,7 @@ def create_routers(app):
 
     app.add_router(api.api)
     app.add_router(api.services_api)
+    app.add_router(api.sensors_api)
 
     core.set_catch_all_excluded_routes(app.get_routers_prefixes())
     app.add_router(core)
@@ -20,6 +24,7 @@ def setup_tasks(app):
     debug_logging = app.config.get("DEBUG")
 
     app.add_background_task(tasks.CheckServiceAvailabilityTask(logging=debug_logging))
+    app.add_background_task(tasks.LogSensorsTask(logging=debug_logging))
 
 
 def setup_app(app):
