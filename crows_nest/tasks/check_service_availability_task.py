@@ -6,7 +6,7 @@ import requests
 
 class CheckServiceAvailabilityTask(TaskBase):
     def __init__(self, logging=False):
-        super().__init__(periodic_interval=60, logging=logging)
+        super().__init__(periodic_interval=30, logging=logging)
 
     async def task(self):
         services = db.query(ServiceModel)

@@ -1,0 +1,2 @@
+from crows_nest.tasks.check_service_availability_task import CheckServiceAvailabilityTask
+from crows_nest.tasks.log_sensors_task import LogSensorsTask
