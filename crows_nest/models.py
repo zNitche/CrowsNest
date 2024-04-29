@@ -29,12 +29,20 @@ class ServiceModel(ModelBase):
     def section_name():
         return "services"
 
-    def __init__(self, name=None, added_at=None, url=None, port=None, health_check_endpoint=None):
+    def __init__(self,
+                 name=None,
+                 added_at=None,
+                 url=None,
+                 redirect_url=None,
+                 port=None,
+                 health_check_endpoint=None):
+
         super().__init__()
 
         self.name = name
         self.added_at = added_at
         self.url = url
+        self.redirect_url = redirect_url
         self.port = port
         self.health_check_endpoint = health_check_endpoint
 
@@ -44,6 +52,7 @@ class ServiceModel(ModelBase):
         data["name"] = self.name
         data["added_at"] = self.added_at
         data["url"] = self.url
+        data["redirect_url"] = self.redirect_url
         data["port"] = self.port
         data["health_check_endpoint"] = self.health_check_endpoint
 
