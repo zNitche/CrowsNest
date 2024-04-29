@@ -52,13 +52,13 @@ class Database:
 
         models = []
 
-        for item in filtered_data:
+        for index, item in enumerate(filtered_data):
             item_model = model()
             item_model.create(item)
 
             models.append(item_model)
 
-        if first:
-            models = models[0] if len(models) > 0 else None
+            if index == 0 and first:
+                break
 
         return models
