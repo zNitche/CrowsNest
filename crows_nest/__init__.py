@@ -1,6 +1,6 @@
 from crows_nest.storage import Database
 from crows_nest.storage import Cache
-from crows_nest import machine_communication
+from crows_nest import machine_interfaces
 
 
 db = Database()

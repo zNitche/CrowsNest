@@ -1,5 +1,5 @@
 from lightberry import TaskBase
-from crows_nest import sensors_cache, machine_communication
+from crows_nest import sensors_cache, machine_interfaces
 from aht20 import AHT20
 
 
@@ -13,7 +13,7 @@ class LogSensorsTask(TaskBase):
 
     def __setup_modules(self):
         try:
-            self.__aht20 = AHT20(machine_communication.i2c_0)
+            self.__aht20 = AHT20(machine_interfaces.i2c_0)
 
         except Exception as e:
             self.__print_log(message="error while performing modules setup", exception=e)
