@@ -8,7 +8,7 @@ sensors_api = Router("sensors_api", url_prefix="/api/sensors")
 
 @sensors_api.route("/environment")
 async def environment_data(request):
-    aht20_data = sensors_cache.read("aht20")
+    aht20_data: dict[str, float] = sensors_cache.read("aht20")
     temp = None
     humidity = None
 

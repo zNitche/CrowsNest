@@ -1,20 +1,26 @@
+from lightberry import typing
+
+if typing.TYPE_CHECKING:
+    pass
+
+
 class ModelBase:
     @staticmethod
-    def section_name():
+    def section_name() -> str | None:
         return None
 
     def __init__(self):
-        self.id = None
+        self.id: int | None = None
 
-    def create(self, data):
+    def create(self, data: dict[str, ...]):
         self.__setup_data(data)
 
-    def __setup_data(self, data):
+    def __setup_data(self, data: dict[str, ...]):
         for key, value in data.items():
             if hasattr(self, key):
                 setattr(self, key, value)
 
-    def dump(self, extra_attrs=None):
+    def dump(self, extra_attrs: dict[str, ...] = None) -> dict[str, ...]:
         data = {}
 
         if extra_attrs is not None:
@@ -30,12 +36,12 @@ class ServiceModel(ModelBase):
         return "services"
 
     def __init__(self,
-                 name=None,
-                 added_at=None,
-                 url=None,
-                 redirect_url=None,
-                 port=None,
-                 health_check_endpoint=None):
+                 name: str | None = None,
+                 added_at: str | None = None,
+                 url: str | None = None,
+                 redirect_url: str | None = None,
+                 port: int | None = None,
+                 health_check_endpoint: str | None = None,):
 
         super().__init__()
 

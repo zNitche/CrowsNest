@@ -4,8 +4,8 @@ import argparse
 
 
 def main(args):
-    db_path = args.db_path
-    pack_db = args.minify
+    db_path: str = args.db_path
+    pack_db: bool = args.minify
 
     if db_path and os.path.exists(db_path):
         with open(db_path, "r") as db_file:

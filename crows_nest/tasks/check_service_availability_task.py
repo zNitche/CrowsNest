@@ -9,9 +9,9 @@ class CheckServiceAvailabilityTask(TaskBase):
         super().__init__(periodic_interval=30, logging=logging)
 
     async def task(self):
-        services = db.query(ServiceModel)
+        services: list[ServiceModel] = db.query(ServiceModel)
 
-        for service in services:
+        for service in services:  # type: ServiceModel
             target_url = f"{service.url}:{service.port}{service.health_check_endpoint}"
 
             try:
