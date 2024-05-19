@@ -57,9 +57,6 @@ class ServiceModel(ModelBase):
 
         data["name"] = self.name
         data["added_at"] = self.added_at
-        data["url"] = self.url
         data["redirect_url"] = self.redirect_url
-        data["port"] = self.port
-        data["health_check_endpoint"] = self.health_check_endpoint
 
         return data
