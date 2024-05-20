@@ -15,7 +15,7 @@ class CheckServiceAvailabilityTask(TaskBase):
             target_url = f"{service.url}:{service.port}{service.health_check_endpoint}"
 
             try:
-                res = requests.get(url=target_url, timeout=2)
+                res = requests.get(url=target_url, timeout=3)
                 is_available = True if res.status_code == 200 else False
 
             except Exception:
