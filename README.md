@@ -1,6 +1,9 @@
 # CrowsNest
 lightberryAPI + Raspberry Pi Pico W = LAN services hub
 
+![case_1](.media/1.jpg)
+![case_2](.media/2.jpg)
+
 ### Requirements
 - Project utilize `lightberryAPI v1.2.1` as part of MicroPython firmware
 [see](https://github.com/zNitche/lightberryAPI?tab=readme-ov-file#as-a-micropython-frozen-module)
@@ -33,7 +36,7 @@ cp db.template.json db.json
 The main goals of the project was to: 
 - Use lightberryAPI in real case scenario.
 - Build low power consumption device I can use to track LAN services.
-- Design and print 3D case.
+- Design and 3D print case for device.
 
 ### Extra
 #### Database tools
