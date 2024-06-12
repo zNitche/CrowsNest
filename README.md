@@ -48,3 +48,16 @@ The main goals of the project was to:
   ```
   python3 .tools/convert_db.py --db_path ./db.json
   ```
+
+### Development
+Install requirements used for development
+
+```
+pip3 install -r requirements.txt
+```
+
+Enter REPL
+```
+> rshell
+> repl
+```
