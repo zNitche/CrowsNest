@@ -5,7 +5,7 @@ lightberryAPI + Raspberry Pi Pico W = LAN services hub
 ![case_2](.media/2.jpg)
 
 ### Requirements
-- Project utilize `lightberryAPI v1.2.1` as part of MicroPython firmware
+- Project utilize `lightberryAPI v1.2.4` as part of MicroPython firmware
 [see](https://github.com/zNitche/lightberryAPI?tab=readme-ov-file#as-a-micropython-frozen-module)
 - Project utilize [aht20.py](https://github.com/zNitche/pico-aht20/blob/master/aht20.py) as part of MicroPython firmware
 

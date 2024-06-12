@@ -1,10 +1,10 @@
-from lightberry import TaskBase
+from lightberry import ATaskBase
 from crows_nest import db, services_availability_cache
 from crows_nest.models import ServiceModel
 import requests
 
 
-class CheckServiceAvailabilityTask(TaskBase):
+class CheckServiceAvailabilityTask(ATaskBase):
     def __init__(self, logging=False):
         super().__init__(periodic_interval=30, logging=logging)
 

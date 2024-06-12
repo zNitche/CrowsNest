@@ -1,9 +1,9 @@
-from lightberry import TaskBase
+from lightberry import ATaskBase
 from crows_nest import sensors_cache, machine_interfaces
 from aht20 import AHT20
 
 
-class LogSensorsTask(TaskBase):
+class LogSensorsTask(ATaskBase):
     def __init__(self, logging=False):
         super().__init__(periodic_interval=15, logging=logging)
 
