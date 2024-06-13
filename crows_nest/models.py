@@ -1,9 +1,3 @@
-from lightberry import typing
-
-if typing.TYPE_CHECKING:
-    pass
-
-
 class ModelBase:
     @staticmethod
     def section_name() -> str | None:

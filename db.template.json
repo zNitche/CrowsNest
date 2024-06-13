@@ -2,12 +2,12 @@
   "services": [
     {
       "id": 0,
-      "name": "",
-      "added_at": "",
-      "url": "",
-      "redirect_url": "",
-      "port": "",
-      "health_check_endpoint": ""
+      "name": "example service",
+      "added_at": "2024-04-25T14:15:44+02:00",
+      "url": "192.168.1.100",
+      "port": "8000",
+      "health_check_endpoint": "/api/healthcheck",
+      "redirect_url": "http://192.168.1.100:8000"
     }
   ]
 }
