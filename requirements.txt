@@ -3,7 +3,6 @@ click==8.1.7
 docopt==0.6.2
 pyserial==3.5
 python-dotenv==1.0.1
-rshell==0.0.32
 
 lightberry @ git+https://github.com/zNitche/lightberryAPI.git@v1.2.4
 microHTTP @ git+https://github.com/zNitche/microHTTP.git@v1.0.0

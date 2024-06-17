@@ -51,14 +51,8 @@ The main goals of the project was to:
   ```
 
 ### Development
-Install requirements used for development
+packages in `requirements.txt` are used for development
 
 ```
 pip3 install -r requirements.txt
-```
-
-Enter REPL
-```
-> rshell
-> repl
 ```
