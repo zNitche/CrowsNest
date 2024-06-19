@@ -1,8 +1,8 @@
 # CrowsNest
 lightberryAPI + Raspberry Pi Pico W = LAN services hub
 
-![case_1](.media/1.jpg)
-![case_2](.media/2.jpg)
+![case_1](media/1.jpg)
+![case_2](media/2.jpg)
 
 ### Requirements (Microcontroller)
 
@@ -41,13 +41,13 @@ The main goals of the project was to:
 
 ### Extra
 #### Database tools
-  - minify `db.json`
+- minify `db.json`
   ```
-  python3 .tools/convert_db.py --db_path ./db.json --minify
+  python3 tools/convert_db.py --db_path ./db.json --minify
   ```
-  - de-minify `db.json`
+- de-minify `db.json`
   ```
-  python3 .tools/convert_db.py --db_path ./db.json
+  python3 tools/convert_db.py --db_path ./db.json
   ```
 
 ### Development
@@ -55,4 +55,26 @@ packages in `requirements.txt` are used for development
 
 ```
 pip3 install -r requirements.txt
+```
+
+#### Remote Shell
+for flashing pico you can use `rshell`
+```
+pip3 install rshell==0.0.32
+```
+
+enter REPL
+```
+rshell 
+repl
+```
+
+flash
+```
+rshell -f commands/flash
+```
+
+clear all files
+```
+rshell -f commands/wipe
 ```
