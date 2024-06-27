@@ -2,3 +2,4 @@ cp -r crows_nest /pyboard
 cp -r files /pyboard
 cp -r *.py /pyboard
 cp -r *.json /pyboard
+repl
