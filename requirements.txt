@@ -1,2 +1,2 @@
-lightberry @ git+https://github.com/zNitche/lightberryAPI.git@v1.2.4
+lightberry @ git+https://github.com/zNitche/lightberryAPI.git@v1.2.6
 microHTTP @ git+https://github.com/zNitche/microHTTP.git@v1.0.0
