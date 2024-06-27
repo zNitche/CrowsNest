@@ -15,11 +15,6 @@ async def serve_assets(request: Request, asset_name: str):
     if serialized_path.endswith(".gz"):
         response.add_header("Content-Encoding", "gzip")
 
-    if serialized_path.endswith(".js.gz"):
-        response.add_header("Content-Type", "text/javascript")
-    elif serialized_path.endswith(".css.gz"):
-        response.add_header("Content-Type", "text/css")
-
     return response
 
 
