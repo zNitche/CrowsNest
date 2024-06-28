@@ -10,16 +10,10 @@ core = Router("core")
 @core.route("/assets/:asset_name")
 async def serve_assets(request: Request, asset_name: str):
     serialized_path = f"/files/assets/{asset_name.replace('..', '')}"
-    response = FileResponse(file_path=serialized_path)
 
-    if serialized_path.endswith(".gz"):
-        response.add_header("Content-Encoding", "gzip")
-
-    return response
+    return FileResponse(file_path=serialized_path)
 
 
 @core.catch_all()
 async def web_panel(request: Request):
-    asset_path = "/files/index.html"
-
-    return FileResponse(file_path=asset_path)
+    return FileResponse(file_path="/files/index.html")

@@ -6,7 +6,7 @@ lightberryAPI + Raspberry Pi Pico W = LAN services hub
 
 ### Requirements (Microcontroller)
 
-- [lightberryAPI v1.2.6](https://github.com/zNitche/lightberryAPI/releases/tag/v1.2.6) - frozen module
+- [lightberryAPI v1.2.7](https://github.com/zNitche/lightberryAPI/releases/tag/v1.2.7) - frozen module
 - [aht20.py](https://github.com/zNitche/pico-aht20/blob/master/aht20.py) - frozen module
 - [microHTTP v1.0.0](https://github.com/zNitche/microHTTP/releases/tag/v1.0.0) - frozen module
 
